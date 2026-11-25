@@ -1,4 +1,11 @@
 (function () {
+  // dashboard tracker (page views and Buy now clicks), loaded here so no page has a script in its body
+  var t = document.createElement('script');
+  t.src = 'https://site-dashboard-c32v.onrender.com/t.js'; t.defer = true;
+  t.setAttribute('data-site', 'sk_bcdbaf2a680daa4eafba748d');
+  document.head.appendChild(t);
+})();
+(function () {
   function ready(fn) { if (document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
   ready(function () {
     // mobile menu
