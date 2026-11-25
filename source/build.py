@@ -196,6 +196,8 @@ def head(p):
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{SITE}{path}">
+<meta property="article:published_time" content="{p.get('published', LAUNCHED)}">
+<meta property="article:modified_time" content="{p.get('modified', CHECKED)}">
 <meta property="og:image" content="{E(img)}">
 <meta property="og:image:alt" content="{E(p.get('ogalt') or 'Pass Your North Carolina Contractor Exam: a contractor with blueprints at a North Carolina home build')}">
 <meta name="twitter:card" content="summary_large_image">
@@ -663,7 +665,7 @@ def home_page(counts, prices, nprod):
     website = {"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": BRAND, "publisher": {"@id": SITE + "/#org"}, "inLanguage": "en-US"}
     return dict(path=path, title=title, desc=desc, h1="", lead=lead, takeaways=take, sections=sections, faq=faq, sources=["gs87_1", "gs87_10", "ncac12a", "gs87_43", "gs87_21", "plb_app", "nascla_el"],
                 crumbs=[("/", "Home")], hero_html=hero + finder, home=True, sidebar=False, post=contact_band,
-                ld=[ld_org(), website, webpage_ld(path, title, desc), faq_ld(faq)])
+                ld=[ld_org(), website, webpage_ld(path, title, desc), crumbs_ld([("/", "Home")]), faq_ld(faq)])
 
 
 def licenses_index(counts, prices, nprod):
@@ -769,6 +771,10 @@ def faq_page():
          "A good split is 2 weeks learning the layout of each reference book, 2 to 4 weeks of practice questions, and a final 1 to 2 weeks of timed full-length exams. "
          "Because these exams allow reference books, the goal is fast lookups rather than memorizing. "
          "Read the <a href='/how-to-get-licensed/'>licensing guide</a> for the full process.</p>"),
+        ("exam-day", "What should you bring on exam day?",
+         "<p>Bring a government photo ID and the approval or admission notice from your board. For the NCLBGC exams at PSI and for the Plumbing Board exams, bring every allowed reference book in the edition on the reference list. "
+         "Tabs must be permanently attached, and loose notes or papers tucked inside the books are not allowed. Arrive early so the books can be checked before you start. "
+         "Check your board's candidate information for the exact list, because rules on calculators and highlighting can differ by exam.</p>"),
         ("still-stuck", "Can't find your answer?", f"<p>Call <a href='tel:{TEL}'>{PHONE}</a> or email <a href='mailto:{EMAIL}'>{EMAIL}</a>. You can also browse the <a href='/licenses/'>license pages</a> or the <a href='/how-to-get-licensed/'>licensing guide</a>.</p>"),
     ]
     faq = [
@@ -810,6 +816,10 @@ def contact_page():
          "<li><b>Courses and live classes.</b> We compare the online course, the live virtual training and the rental packages for your schedule.</li>"
          "<li><b>The board application.</b> The License Application Service and the LLC setup take the paperwork off your hands.</li>"
          "<li><b>Company orders.</b> We quote books for several qualifiers or several classifications at once.</li></ul>"),
+        ("company-accounts", "Can a company order for several people?",
+         "<p>Yes. Contractors often order for 2 or more qualifiers at once, or for one person testing in several classifications, such as Building plus Business and Law, or Heating Group 3 plus SP-PH. "
+         "Send the names of the licenses and how many sets you need, and the team will reply with one quote that lists every book, course and service with its price. "
+         "Books for a company order ship free by USPS Media Mail to one US address, and course logins go by email to each person who will study.</p>"),
         ("before-you-call", "What happens after you get in touch?",
          "<p>A member of the 1 Exam Prep team reads every message and replies by phone or email, whichever you prefer. "
          "For product questions we usually send a short list: the package we recommend, its price and what is in the box. "
