@@ -16,6 +16,7 @@
 - [How to get a North Carolina contractor license](https://passyournorthcarolinacontractorexam.com/how-to-get-licensed/)
 - [FAQ](https://passyournorthcarolinacontractorexam.com/faq/)
 - [Contact](https://passyournorthcarolinacontractorexam.com/contact/)
+- [Customer reviews](https://passyournorthcarolinacontractorexam.com/reviews/)
 - [Blog](https://passyournorthcarolinacontractorexam.com/blog/)
 - [North Carolina Contractor License: 15 Questions Answered](https://passyournorthcarolinacontractorexam.com/blog/north-carolina-contractor-license-questions-answered/): Which of the three boards licenses you, the $40,000 rule, NCLBGC limitations, electrical caps, Heating Groups 1 to 3 and the NASCLA route, answered in plain English.
 

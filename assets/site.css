@@ -149,3 +149,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 .help .btn-gold{color:#1B1405}
 @media(max-width:820px){.hero{min-height:600px;align-items:flex-end}.hero:after{background:linear-gradient(180deg,rgba(6,46,28,.15) 0%,rgba(6,46,28,.55) 45%,rgba(6,46,28,.92) 100%)}.hero-bg{object-position:72% center}.band{margin:0 0 60px;border-radius:0}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* reviews page */
+.reviews-embed{margin:18px 0 24px;min-height:120px}.reviews-embed iframe{display:block;width:100%;min-width:100%;border:0}.reviews-fallback{font-size:.95em;opacity:.8}
